@@ -1,0 +1,68 @@
+1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+var cat = {
+ name: ‘Fluffy',
+ activities: [‘play', ‘eat cat food'],
+ catFriends: [
+ {
+ name: ‘bar',
+ activities: [‘be grumpy', ‘eat bread omblet'],
+ weight: 8,
+ furcolor: ‘white'
+ }, 
+ {
+ name: ‘foo',
+ activities: [‘sleep', ‘pre-sleep naps'],
+ weight: 3
+ }
+ ]
+}
+
+Solution:
+
+for(var i=0; i<3; i++)
+{
+    console.log(cat.catFriends[i].name);
+    
+}
+
+var x;
+for(x of cat.activities[0])
+{
+    console.log(x);
+}
+
+for(x in cat)
+{
+    console.log(cat[x]);
+}
+
+function GetDetails(Item)
+{
+    console.log(Item);
+}
+cat.activities.forEach(GetDetails);
+
+2.Create your own resume data in JSON format
+
+var Resume = {
+name : Swathi
+Email : swathi@gmail.com
+address : Chennai
+education : [["BCA"  "First class"], ["Higher scondary" 84%], ["Secondary School"  78%]]
+experience : {CTS :Sr.Coordinator for 4 years, SGS : Consultant for 1.5 years, ALLSec : CCE for 6 months}
+Personal strength : [grasp things quick, team worker, patience, planning&organizing, problem solving]
+skills:[certified Full stack developer, experienced in MS Office, knowledge in C & SQL server]
+client appreciation : 2 Rewards
+languages known : [tamil, hindi, english, malayalam]
+}
+
+3.Read about the difference between window, screen and document in javascript
+
+*Window is the main JavaScript object root
+*window is the execution context and global object for that context's JavaScript
+*The window is the first thing that gets loaded into the browser. This window object has the majority of the properties like length, innerWidth, innerHeight, name.
+*Document contains the DOM, initialized by parsing HTML
+*The document object is your html, aspx, php, or other document that will be loaded into the browser. The document actually gets loaded inside the window object and has properties available to it like title, URL, cookie, etc.
+*Screen describes the physical display's full screen.
+*The screen contains properties about the user's display.
